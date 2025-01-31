@@ -1,30 +1,12 @@
-from pprint import pprint
+def apply(dictionary1, board):
+    player = next(iter(dictionary1))
+    played_space = next(iter(dictionary1.values()))
 
-
-def apply(game_infos, gameState):
-    player = game_infos[0]
-    playedspace = game_infos[1]
-    gameState.reverse()
-    for i in range(len(gameState)):
-        if gameState[i][playedspace] == 0:
+    for i in range(len(board - 1, -1, -1)):
+        if board[i][played_space] == 0:
             if player == "p1":
-                gameState[i][playedspace] = -1
+                board[i][played_space] = -1
             elif player == "p2":
-                gameState[i][playedspace] = 1
+                board[i][played_space] = 1
             break
-    gameState.reverse()
-    return gameState
-
-
-board = [
-    [0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0],
-    [0, 0, 0, 0, 0, 0],
-]
-
-
-pprint(apply(["p1", 3], board))
+    return board
