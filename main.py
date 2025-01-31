@@ -16,7 +16,7 @@ board = [
 
 def get_input1():
     global board
-    p1_num = input("Please enter number of the column: ")
+    p1_num = int(input("Please enter number of the column: "))
     dictionary1 = {"p1": p1_num}
     app_result = apply(dictionary1, board)
     board = app_result
@@ -32,7 +32,7 @@ def get_input1():
 
 def get_input2(check_result):
     global board
-    p2_num = "Please enter number of the column: "
+    p2_num = int(input("Please enter number of the column: "))
     dictionary2 = {"p2": p2_num}
     app_result = apply(dictionary2, board)
     board = app_result
