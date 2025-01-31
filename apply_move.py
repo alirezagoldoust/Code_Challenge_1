@@ -9,9 +9,9 @@ def apply(game_infos,gameState):
     for i in range (len(gameState)):
         if gameState[i][playedspace]==0:
             if player == "p1":
-                gameState[i][playedspace]= 1
+                gameState[i][playedspace]= -1
             elif player == "p2":
-                gameState[i][playedspace]=2
+                gameState[i][playedspace]=1
             break
     gameState.reverse()
 #    print(gameState)
