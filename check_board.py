@@ -1,41 +1,59 @@
-# Write you checking of four in row logic here
-# have a great project!✨
-
-
 def checked_board(a):
-    for i in range(6):
-        for j in range(7):
+    rows = len(a)
+    cols = len(a[0])
+
+    for i in range(rows):  # پیمایش ردیف‌ها
+        for j in range(cols):  # پیمایش ستون‌ها
+            # لیست‌هایی برای ذخیره خانه‌های متوالی
             sliced_list1 = []
             sliced_list2 = []
             sliced_list3 = []
             sliced_list4 = []
+
+            # بررسی ۴ خانه متوالی در هر جهت
             for k in range(4):
-                if j + k < 7:
+                # بررسی ردیف افقی (به شرطی که j + k از اندازه‌ی ستون‌ها بیشتر نشود)
+                if j + k < cols:
                     sliced_list1.append(a[i][j + k])
-                if i + k < 6:
+                # بررسی ستون عمودی (به شرطی که i + k از اندازه‌ی ردیف‌ها بیشتر نشود)
+                if i + k < rows:
                     sliced_list2.append(a[i + k][j])
-                if i + k < 6 and j - k >= 0:
+                # بررسی قطر معکوس (به شرطی که i + k و j - k در محدوده باشند)
+                if i + k < rows and j - k >= 0:
                     sliced_list3.append(a[i + k][j - k])
-                if i + k < 6 and j + k < 7:
+                # بررسی قطر اصلی (به شرطی که i + k و j + k در محدوده باشند)
+                if i + k < rows and j + k < cols:
                     sliced_list4.append(a[i + k][j + k])
 
-            # print(sliced_list1, int(sum(sliced_list1) / 4))
-            # print(sliced_list2, int(sum(sliced_list2) / 4))
-            # print(sliced_list3, int(sum(sliced_list3) / 4))
-            # print(sliced_list4, int(sum(sliced_list4) / 4))
-            checked = (
-                (int(sum(sliced_list1) / 4))
-                + (int(sum(sliced_list2) / 4))
-                + (int(sum(sliced_list3) / 4))
-                + (int(sum(sliced_list4) / 4))
-            )
-            if checked != 0:
-                # print(checked)
-                return 1 if checked > 0 else -1
+            # بررسی اگر چهار خانه مشابه باشند
+            if len(set(sliced_list1)) == 1 and sliced_list1[0] != 0:
+                return sliced_list1[0]
+            if len(set(sliced_list2)) == 1 and sliced_list2[0] != 0:
+                return sliced_list2[0]
+            if len(set(sliced_list3)) == 1 and sliced_list3[0] != 0:
+                return sliced_list3[0]
+            if len(set(sliced_list4)) == 1 and sliced_list4[0] != 0:
+                return sliced_list4[0]
 
-            if checked >= 1:
-                print("winner is player 1")
-            if checked <= -1:
-                print("winner is player 2")
+    return 0  # اگر هیچ برنده‌ای پیدا نشد
 
-    return 0
+
+# آزمایش کد با یک برد اولیه
+result = checked_board(
+    [
+        [0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0],
+    ]
+)
+
+if result == 1:
+    print("Winner is Player 1")
+elif result == -1:
+    print("Winner is Player 2")
+else:
+    print("No winner yet")
