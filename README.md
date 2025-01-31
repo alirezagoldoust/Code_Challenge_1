@@ -6,7 +6,8 @@ This project is designed for learning purposes and serves as a great introductio
 ## 🚀 How to Play  
 - Players take turns dropping their pieces into a column.  
 - The goal is to connect **four** pieces in a row (vertically, horizontally, or diagonally).  
-- The first player to do so wins!  
+- The first player to do so wins!
+- sample video: https://www.youtube.com/shorts/NxMvln4fiJs
 
 ## 🛠️ Requirements  
 - Python 3.x  
