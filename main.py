@@ -16,25 +16,25 @@ board = [
 
 def get_input1():
     dictionary1 = {"p1": -1}
-    app_result = apply_move(dictionary1, board)
+    app_result = apply(dictionary1, board)
     board = app_result
-    print_board(app_result)
-    check_result = check_board(board)
+    print_mode(app_result)
+    check_result = checked_board(board)
     return check_result
 
 
 def get_input2(check_result):
     dictionary2 = {"p2": 1}
-    app_result = apply_move(dictionary2, board)
+    app_result = apply(dictionary2, board)
     board = app_result
-    print_board(app_result)
-    check_result = check_board(board)
+    print_mode(app_result)
+    check_result = checked_board(board)
 
     return check_result
 
 
 def main():
-    print_board(board)
+    print_mode(board)
     while True:
 
         if get_input1() != False:
