@@ -20,9 +20,9 @@ def get_input1():
     player1= int( input("insert a number of culumn: "))
     p1 = p1.append(player1)
     app_result = apply_move(p1, board)
+    board = app_result
     print_board(app_result)
     check_result = check_board(board)
-    board = app_result
     return check_result
 
 def get_input2(check_result):
@@ -30,9 +30,10 @@ def get_input2(check_result):
     player2= int( input("insert a number of culumn: "))
     p2 = p2.append(player2)
     app_result = apply_move(p2, board)
+    board = app_result
     print_board(app_result)
     check_result = check_board(board)
-    board = app_result
+
     return check_result
 
 
