@@ -3,15 +3,6 @@
 #from apply_move import my_row
 #from main import character
 from pprint import pprint
-a = [
-    [0,1,0,0,0,0,0],
-    [0,0,2,0,0,0,0],
-    [0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0],
-    [0,0,0,0,0,0,0],
-]
-b=[]
 
     # color_codes = {
       
