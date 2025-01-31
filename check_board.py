@@ -1,6 +1,7 @@
 # Write you checking of four in row logic here
 # have a great project!✨
 
+
 def checked_board(a):
     for i in range(6):
         for j in range(7):
@@ -22,10 +23,12 @@ def checked_board(a):
             # print(sliced_list2, int(sum(sliced_list2) / 4))
             # print(sliced_list3, int(sum(sliced_list3) / 4))
             # print(sliced_list4, int(sum(sliced_list4) / 4))
-            checked = ((int(sum(sliced_list1) / 4)) +
-                       (int(sum(sliced_list2) / 4)) +
-                       (int(sum(sliced_list3) / 4)) +
-                       (int(sum(sliced_list4) / 4)))
+            checked = (
+                (int(sum(sliced_list1) / 4))
+                + (int(sum(sliced_list2) / 4))
+                + (int(sum(sliced_list3) / 4))
+                + (int(sum(sliced_list4) / 4))
+            )
             if checked != 0:
                 # print(checked)
                 return 1 if checked > 0 else -1
