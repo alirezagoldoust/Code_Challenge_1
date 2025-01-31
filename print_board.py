@@ -13,6 +13,3 @@ def print_mode(a):
 
         print()
         print("-" * 26)
-
-
-print(print_mode("mohamad"))
