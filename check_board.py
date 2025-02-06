@@ -11,7 +11,7 @@ def check_board(a):
                     sliced_list1.append(a[i][j + k])
                 if i + k < 6:
                     sliced_list2.append(a[i + k][j])
-                if i + k < 6 and j - k >= 0:
+                if 0 <= i + k < 6 and 0 <= j - k < 7:
                     sliced_list3.append(a[i + k][j - k])
                 if i + k < 6 and j + k < 7:
                     sliced_list4.append(a[i + k][j + k])
