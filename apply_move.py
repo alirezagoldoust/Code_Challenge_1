@@ -1,4 +1,4 @@
-def apply(dictionary1, board):
+def apply_move(dictionary1, board):
     player = next(iter(dictionary1))
     played_space = next(iter(dictionary1.values()))
 
@@ -8,5 +8,5 @@ def apply(dictionary1, board):
                 board[i][played_space] = -1
             elif player == "p2":
                 board[i][played_space] = 1
-            break
+            return board
     return board
