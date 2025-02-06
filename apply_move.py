@@ -1,12 +1,6 @@
-def apply_move(dictionary1, board):
-    player = next(iter(dictionary1))
-    played_space = next(iter(dictionary1.values()))
-
+def apply_move(player, column, board):
     for i in range(len(board) - 1, -1, -1):
-        if board[i][played_space] == 0:
-            if player == "p1":
-                board[i][played_space] = -1
-            elif player == "p2":
-                board[i][played_space] = 1
+        if board[i][column] == 0:
+            board[i][column] = -1 if player == "p1" else 1
             return board
     return board
