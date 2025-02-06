@@ -13,15 +13,15 @@ board = [
 
 
 def get_input1(board):
-    dictionary1 = {"p1": -1}
-    board = apply_move(dictionary1, board)
+    column = int(input("Player 1, enter column (0-6): "))
+    board = apply_move("p1", column, board)
     print_mode(board)
     return check_board(board)
 
 
 def get_input2(board):
-    dictionary2 = {"p2": 1}
-    board = apply_move(dictionary2, board)
+    column = int(input("Player 2, enter column (0-6): "))
+    board = apply_move("p2", column, board)
     print_mode(board)
     return check_board(board)
 
