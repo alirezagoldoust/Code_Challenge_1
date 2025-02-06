@@ -8,7 +8,7 @@ def print_mode(a):
                 print(" ", end=" | ")
             elif a[i][j] == 1:
                 print("\u001b[0m", "\u001b[34;1m", "●", "\u001b[0m", end=" | ", sep="")
-            elif a[i][j] == 2:
+            elif a[i][j] == -1:
                 print("\u001b[0m", "\u001b[31m", "●", "\u001b[0m", end=" | ", sep="")
 
         print()
